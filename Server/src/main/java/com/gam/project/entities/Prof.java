@@ -33,15 +33,12 @@ public class Prof extends User {
  	           inverseJoinColumns= {@JoinColumn(name="fk_course")})
  	private List<Student> students;
 
-	public Prof(Long id, String firstName, String lastName, int age, int cIN, List<Course> courses) {
-		super(id, firstName, lastName, age, cIN);
-		this.courses = courses;
-	}
+	
 	public Prof() {
 		
 	}
 
-	public Prof(Long id, String firstName, String lastName, int age, int cIN) {
+	public Prof(Long id, String firstName, String lastName, int age, String cIN) {
 		super(id, firstName, lastName, age, cIN);
 	}
 

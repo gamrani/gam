@@ -20,9 +20,9 @@ public class User implements Serializable {
 	private int age; 
 	private int tel;
 	private String email;
-	private int CIN;
+	private String CIN;
 	
-	public User(Long id, String firstName, String lastName, int age, int cIN) {
+	public User(Long id, String firstName, String lastName, int age, String cIN) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -67,10 +67,10 @@ public class User implements Serializable {
 		this.age = age;
 	}
 
-	public int getCIN() {
+	public String getCIN() {
 		return CIN;
 	}
 
-	public void setCIN(int cIN) {
+	public void setCIN(String cIN) {
 		CIN = cIN;
 	}}

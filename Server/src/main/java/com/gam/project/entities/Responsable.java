@@ -13,7 +13,7 @@ public class Responsable extends User {
 	@OneToOne(mappedBy="responsable")
 	private Student student;
 
-	public Responsable(Long id, String firstName, String lastName, int age, int cIN) {
+	public Responsable(Long id, String firstName, String lastName, int age, String cIN) {
 		super(id, firstName, lastName, age, cIN);
 	}
 
