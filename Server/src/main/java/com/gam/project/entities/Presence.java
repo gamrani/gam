@@ -1,5 +1,6 @@
 package com.gam.project.entities;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Entity;
@@ -12,7 +13,7 @@ import javax.persistence.OneToOne;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
-public class Presence {
+public class Presence implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
