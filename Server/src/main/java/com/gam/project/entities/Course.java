@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -34,6 +35,10 @@ public class Course implements Serializable {
 	           joinColumns= {@JoinColumn(name="fk_course")},
 	           inverseJoinColumns= {@JoinColumn(name="fk_student")})
     private List<Student> students ;
+	
+	@Autowired
+	@OneToOne(mappedBy="course")
+	private Presence presence;
 	
 	
 	public List<Student> getStudents() {

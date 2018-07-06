@@ -35,6 +35,10 @@ public class Student extends User {
 	@JoinColumn(name="fk_student")
 	private Responsable responsable;
 	
+	@Autowired
+	@OneToOne(mappedBy="student")
+	private Presence presence;
+	
 	public Responsable getResponsable() {
 		return responsable;
 	}
