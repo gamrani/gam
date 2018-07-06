@@ -35,6 +35,12 @@ public class Student extends User {
 	@JoinColumn(name="fk_student")
 	private Responsable responsable;
 	
+	public Responsable getResponsable() {
+		return responsable;
+	}
+	public void setResponsable(Responsable responsable) {
+		this.responsable = responsable;
+	}
 	public List<Course> getCourses() {
 		return courses;
 	}

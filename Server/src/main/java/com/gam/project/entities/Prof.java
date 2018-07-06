@@ -38,8 +38,8 @@ public class Prof extends User {
 		
 	}
 
-	public Prof(Long id, String firstName, String lastName, int age, String cIN) {
-		super(id, firstName, lastName, age, cIN);
+	public Prof( String firstName, String lastName, int age, String cIN) {
+		super(firstName, lastName, age, cIN);
 	}
 
 	public List<Course> getCourses() {

@@ -1,9 +1,10 @@
 package com.gam.project.entities;
 
 import java.io.Serializable;
-
+import java.util.Collection;
 
 import javax.persistence.*;
+
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -22,9 +23,8 @@ public class User implements Serializable {
 	private String email;
 	private String CIN;
 	
-	public User(Long id, String firstName, String lastName, int age, String cIN) {
+	public User(String firstName, String lastName, int age, String cIN) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -73,4 +73,5 @@ public class User implements Serializable {
 
 	public void setCIN(String cIN) {
 		CIN = cIN;
-	}}
+	}
+}
