@@ -1,3 +1,48 @@
-<p>
-  students works!
-</p>
+<div *ngIf="showStudent" >
+   <button type="button"(click)="addStudent()" class="btn btn-primary">Ajouter un étudiant</button> 
+   <br><br>
+   <table class="table table-striped"> 
+  <thead>
+    <tr>
+      <th>Numero national</th>
+      <th>Numero d'apogée</th>
+      <th>Cin</th>
+      <th>Age</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of persons">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>{{ person.numeroNational }}</td>
+      <td>{{person.numeroApogee}}</td>
+      <td>{{person.cin}}</td>
+      <td>{{person.age}}</td>
+      <td><button type="button" (click)="studentInformations(person.id)" class="btn btn-info">Discipline et notes</button> &nbsp;<button type="button" (click)="editStudent(person.id)" class="btn btn-success">Modifier</button> &nbsp; <button type="button" (click)="deleteStudent(person.id)" class="btn btn-danger">Supprimer</button></td>
+    </tr>
+  </tbody>
+   
+    
+   </table>
+</div>  
+<div *ngIf="!showStudent" >
+    <div class="example-container">
+      <button (click)="showStudent=true">Show Student</button>
+       <!--  <mat-form-field>
+          <input matInput placeholder="Input">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea"></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select placeholder="Select">
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </div>
+</div>
