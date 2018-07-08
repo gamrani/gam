@@ -4,19 +4,19 @@
    <table class="table table-striped"> 
   <thead>
     <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
       <th>Numero national</th>
       <th>Numero d'apogée</th>
       <th>Cin</th>
       <th>Age</th>
-      <th>Nom</th>
-      <th>Prénom</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let person of persons">
-      <td>{{ person.firstName }}</td>
-      <td>{{ person.lastName }}</td>
+      <td>{{ person.firstName | titlecase}}</td>
+      <td>{{ person.lastName | titlecase }}</td>
       <td>{{ person.numeroNational }}</td>
       <td>{{person.numeroApogee}}</td>
       <td>{{person.cin}}</td>

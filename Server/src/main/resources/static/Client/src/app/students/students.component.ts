@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Student} from './Student';
+import { StudentService } from '../services/student.service';
 
 @Component({
   selector: 'app-students',
@@ -9,10 +10,12 @@ import {Student} from './Student';
 export class StudentsComponent implements OnInit {
   persons: Student[] = [];
   showStudent:boolean;
-  constructor() { }
+
+  constructor(private _studentService:StudentService) { }
+  
   ngOnInit() {
     this.showStudent=true;
-    this.persons= [new Student(1,"a","b",2,"dd",3,4),new Student(2,"c","d",3,"dcd",4,4)];
+    this.persons = this._studentService.getStudentsAll();
   }
 
   addStudent(){this.showStudent=false;}
