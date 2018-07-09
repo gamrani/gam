@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: white;">
+      <span><img src="assets/img/logo.jpg" width="32%"></span>
+      <span style="position: absolute;right: 0;}">
+      <button mat-icon-button><i class="material-icons">account_box</i> </button>
+      <span> &nbsp; </span>
+    </span>
+    </mat-toolbar>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Application Title</span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
